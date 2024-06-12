@@ -9,40 +9,51 @@
 </head>
 
 <body>
-    <div class="container bg-zinc-400 w-full h-screen overflow-y-auto mx-auto p-4 flex flex-col items-center gap-y-4">
-        <div class="p-4 flex gap-x-2 flex-row items-center">
-            <label for="name">Name : </label>
-            <input type="text" placeholder="Enter name and hit enter" id="name" class="border-red-400 mr-6 rounded-md p-2" />
+    <div class="container bg-zinc-200 w-full h-screen overflow-y-auto mx-auto p-4 flex flex-col 
+    items-center gap-y-4 text-sm md:text-base ">
+        <div>
+            <h1 class="font-extrabold text-xl md:text-3xl border-4 border-white p-5 rounded-xl
+             bg-white" >Electricity Bill Management System</h1>
+        </div>
+        <div class="p-4 flex gap-x-2 gap-y-3 flex-col md:flex-row md:items-center">
+            <div>
+                <label for="name">Name : </label>
+                <input type="text" placeholder="Enter name and hit enter" id="name" 
+                class="border-black mr-6 rounded-md p-2 shadow-lg" />
+            </div>
 
-            <label for="months">Month : </label>
-            <select name="months" id="months" class="rounded-md p-2">
-                <!-- <option class="text-zinc-500">Select</option> -->
-                <option value="All">All</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-            </select>
+            <div>
+                <label for="months">Month : </label>
+                <select name="months" id="months" class="rounded-md p-2 shadow-lg">
+                    <!-- <option class="text-zinc-500">Select</option> -->
+                    <option value="All">All</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+            </div>
         </div>
         <div >
-            <button id="btn" class="bg-zinc-700 px-4 py-2 text-white rounded-md">Search</button>
+            <button id="btn" class="bg-zinc-700 px-4 py-2 text-white rounded-md 
+            shadow-xl">Search</button>
         </div>
-        <div class="result w-[70%] relative">
+        <div class="result w-[90%] md:w-[70%] relative">
             <!-- <img class="image"> -->
-            <p class="resultName pr-3 font-extrabold text-xl  "></p>
-            <table class="border-2 w-full border-black m-4 ">
+            <p class="resultName mx-auto md:pr-3 font-extrabold text-xl  "></p>
+            <table class="border-2 w-full border-black m-1 ">
                 <tbody id="records">
                 </tbody>
             </table>
-            <div class="flex justify-end items-end">
+            <div class="flex justify-end items-end pt-3">
                 <table >
                     <tbody id="bill">
                         
@@ -56,3 +67,206 @@
 </body>
 
 </html>
+
+
+
+<!-- let nameEntered = document.querySelector("#name");
+let searchBtn = document.querySelector("button");
+let result = document.querySelector(".result");
+let resultName = document.querySelector('.resultName')
+let month = document.querySelector('#months')
+
+let monthVal = "All";
+let monthClicked = false
+
+month.addEventListener('click',()=>{
+  monthVal = month.value
+  console.log(monthVal)
+  if(monthVal=='All'){
+    monthClicked=false
+  }else{
+    monthClicked=true
+  }
+  console.log(`Month clicked value is ${monthClicked}`)
+})
+
+
+let enteredName ;
+nameEntered.addEventListener("keypress",(e)=>{
+  if(e.target = 'Enter' ){
+    enteredName = nameEntered.value
+  }
+})
+
+let flag = []
+function apiRender(){
+  fetch(`./data.json`)
+    .then(res => res.json())
+    .then(res => {
+        console.log(res)
+        console.table(res['electricity_bills'])
+        
+        output = ` 
+        <tr>
+          <th class="border-4 text-center text-white border-white font-bold bg-slate-400 px-4 p-3">Month</th>
+          <th class="border-4 text-center text-white border-white font-bold bg-slate-400 px-4 p-3">Amount</th>
+          <th class="border-4 text-center text-white border-white font-bold bg-slate-400 px-4 p-3">Units used</th>
+          <th class="border-4 text-center text-white border-white font-bold bg-slate-400  px-4 p-3">Paid on</th>
+        </tr>`;
+
+        let totalBill = 0
+        let avgBill = 0
+        let avgUnits = 0
+        
+
+        billOutput=`
+          <tr>
+            <th class="border-4 text-center border-white font-bold px-5 py-3 bg-yellow-300" >Total Bill</th>  
+            <th class="border-4 text-center border-white font-bold px-5 py-3 bg-yellow-300">Average Bill</th>  
+            <th class="border-4 border-white text-center font-bold px-5 py-3 bg-yellow-300">Average Units</th>  
+          </tr>
+        `
+        // let checkName;
+        // for(let i =0;i<res['electricity_bills'].length;i++){
+        //   checkName = res['electricity_bills'][i]['name']
+        //   if(enteredName == checkName){
+        //     flag = true
+        //     break
+        //   }else{
+        //     flag = false
+        //   } 
+        // }
+
+
+        
+
+        for(let i = 0; i < res['electricity_bills'].length; i++) {
+          nameInside = res['electricity_bills'][i]['name'] 
+          
+          for(let j=0;j<res['electricity_bills'][0]['monthly_bills'].length;j++){
+            monthInside = res['electricity_bills'][i]['monthly_bills'][j]
+
+            if(enteredName == nameInside && monthVal == monthInside['month']){
+
+              output +=`<tr>
+                <td class="border-4 font-semibold text-center border-white bg-slate-300  px-4 p-3">${monthInside['month']}</td>
+                <td class="border-4 font-semibold  text-center border-white bg-slate-200  px-4 p-3">₹${monthInside['amount']}</td>
+                <td class="border-4 font-semibold  text-center border-white bg-slate-300  px-4 p-3">${monthInside['units_used']}</td>
+                <td class="border-4 font-semibold  text-center border-white px-4 bg-slate-200  p-3">${monthInside['bill_paid_date']}</td>
+              `
+              totalBill +=monthInside['amount']
+              avgBill+=totalBill
+              avgUnits+=monthInside['units_used']
+
+              flag.push(1)
+              
+
+            }else if(enteredName == nameInside && monthClicked == false ){
+
+                output +=`<tr>
+                  <td class="border-4 font-semibold text-center border-white bg-slate-300  px-4 p-3">${monthInside['month']}</td>
+                  <td class="border-4 font-semibold  text-center border-white bg-slate-200  px-4 p-3">₹${monthInside['amount']}</td>
+                  <td class="border-4 font-semibold  text-center border-white bg-slate-300  px-4 p-3">${monthInside['units_used']}</td>
+                  <td class="border-4 font-semibold  text-center border-white px-4 bg-slate-200  p-3">${monthInside['bill_paid_date']}</td>
+                `
+                totalBill +=monthInside['amount']
+                avgBill=totalBill/res['electricity_bills'][i]['monthly_bills'].length
+                avgUnits+=monthInside['units_used']/res['electricity_bills'][i]['monthly_bills'].length
+
+                flag.push(1)
+                
+                
+            }else if(enteredName != nameInside){
+              flag.push(0)
+            }
+
+              
+              // else{
+                //   console.log('second')
+                //   nameInside = res['electricity_bills'][i]['name'] 
+                //   monthInside = res['electricity_bills'][i]['monthly_bills'][j]
+                
+                //   output +=`<tr>
+                //     <td class="border-4 font-semibold text-center border-white bg-slate-500  px-4 p-3">${monthInside['month']}</td>
+                //     <td class="border-4 font-semibold  text-center border-white bg-slate-400  px-4 p-3">₹${monthInside['amount']}</td>
+                //     <td class="border-4 font-semibold  text-center border-white bg-slate-500  px-4 p-3">${monthInside['units_used']}</td>
+                //     <td class="border-4 font-semibold  text-center border-white px-4 bg-slate-400  p-3">${monthInside['bill_paid_date']}</td>
+            //   `
+            // }
+          }
+
+          // output = output + `<tr>
+          
+          //       <td class="border-2 border-black p-3">${res['electricity_bills'][i]['monthly_bills'][i]['month']}</td>
+          //       <td class="border-2 border-black p-3">₹${res['electricity_bills'][i]['monthly_bills'][i]['amount']}</td>
+          //       <td class="border-2 border-black p-3">${res['electricity_bills'][i]['monthly_bills'][i]['units_used']}</td>
+          //       <td class="border-2 border-black p-3">${res['electricity_bills'][i]['monthly_bills'][i]['bill_paid_date']}</td>
+          //     </tr>`
+        }
+        billOutput+=`
+              <tr>
+                <td class="border-4 border-white text-center font-semibold px-5 py-3 bg-yellow-100">₹${totalBill.toFixed(2)}</td>
+                <td class="border-4 border-white text-center font-semibold px-5 py-3 bg-yellow-100">₹${avgBill.toFixed(2)}</td>
+                <td class="border-4 border-white text-center font-semibold px-5 py-3 bg-yellow-100">${avgUnits.toFixed(0)}</td>
+              </tr>
+              `
+        console.log(`Total bill is ${totalBill}`)
+        document.getElementById('records').innerHTML = output
+        document.getElementById('bill').innerHTML = billOutput
+      
+
+        // for(let j=0;j<res['electricity_bills'][0]['monthly_bills'].length;j++){
+        //   output +=`<tr>
+        //     <td class="border-4 text-center border-white bg-slate-500  px-4 p-3">${res['electricity_bills'][0]['monthly_bills'][j]['month']}</td>
+        //     <td class="border-4 text-center border-white bg-slate-400  px-4 p-3">₹${res['electricity_bills'][0]['monthly_bills'][j]['amount']}</td>
+        //     <td class="border-4 text-center border-white bg-slate-500  px-4 p-3">${res['electricity_bills'][0]['monthly_bills'][j]['units_used']}</td>
+        //     <td class="border-4 text-center border-white px-4 bg-slate-400  p-3">${res['electricity_bills'][0]['monthly_bills'][j]['bill_paid_date']}</td>
+        //   `
+        // }
+        // for(let i=0;i<res['electricity_bills'].length;i++){
+        //   if(nameEntered.value == res['electricity_bills'][i]['name']){
+        //     elmName = document.createElement('p')
+        //     elmName.textContent = res['electricity_bills'][i]['name']
+        //     result.appendChild(elmName)
+        //   }
+        // }
+        //<td class="border-2 border-black p-3">${res['electricity_bills'][i]['name']}</td>
+
+        
+        // for(let i=0;i<flag.length;i++){
+          // flag.sort()
+          // console.log(flag)
+        // }/
+
+    })
+}
+
+// for(let i=0;i<flag.length;i++){
+//   flag.sort()
+//   console.log(flag)
+// }
+let TFval = false ;
+searchBtn.addEventListener("click", () => {
+  // if(flag.sort()[flag.length - 1] == 1){
+    resultName.innerHTML = enteredName.toUpperCase()
+    apiRender()
+    nameEntered.value = ''
+    // flag.sort()
+    console.log(flag.sort())
+    for(let i=0;i<flag.length;i++){
+      if(flag[i] == 0){
+        TFval = false
+      }else{
+        TFval = true
+        break
+      }
+    }
+    console.log(TFval)
+
+  // }else{
+  //   resultName.innerHTML = "Error"
+  // }
+  // console.log(flag)
+});
+ -->
+
