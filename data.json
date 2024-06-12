@@ -1,0 +1,390 @@
+{
+  "electricity_bills" : [
+    {
+      "name": "mayank bahuguna",
+      "monthly_bills": [
+        {
+          "month": "January",
+          "amount": 2150.75,
+          "units_used": 300,
+          "bill_paid_date": "2024-01-15"
+        },
+        {
+          "month": "February",
+          "amount": 2200.30,
+          "units_used": 270,
+          "bill_paid_date": "2024-02-12"
+        },
+        {
+          "month": "March",
+          "amount": 2300.10,
+          "units_used": 320,
+          "bill_paid_date": "2024-03-10"
+        },
+        {
+          "month": "April",
+          "amount": 2500.75,
+          "units_used": 350,
+          "bill_paid_date": "2024-04-08"
+        },
+        {
+          "month": "May",
+          "amount": 2450.60,
+          "units_used": 340,
+          "bill_paid_date": "2024-05-15"
+        },
+        {
+          "month": "June",
+          "amount": 2100.40,
+          "units_used": 290,
+          "bill_paid_date": "2024-06-14"
+        },
+        {
+          "month": "July",
+          "amount": 2250.20,
+          "units_used": 310,
+          "bill_paid_date": "2024-07-12"
+        },
+        {
+          "month": "August",
+          "amount": 2600.90,
+          "units_used": 330,
+          "bill_paid_date": "2024-08-11"
+        },
+        {
+          "month": "September",
+          "amount": 2700.30,
+          "units_used": 360,
+          "bill_paid_date": "2024-09-10"
+        },
+        {
+          "month": "October",
+          "amount": 2400.70,
+          "units_used": 300,
+          "bill_paid_date": "2024-10-14"
+        },
+        {
+          "month": "November",
+          "amount": 2200.50,
+          "units_used": 280,
+          "bill_paid_date": "2024-11-13"
+        },
+        {
+          "month": "December",
+          "amount": 2750.20,
+          "units_used": 370,
+          "bill_paid_date": "2024-12-15"
+        }
+      ]
+    },
+    {
+      "name": "omkar awhad",
+      "monthly_bills": [
+        {
+          "month": "January",
+          "amount": 2100.50,
+          "units_used": 250,
+          "bill_paid_date": "2024-01-20"
+        },
+        {
+          "month": "February",
+          "amount": 2250.30,
+          "units_used": 260,
+          "bill_paid_date": "2024-02-18"
+        },
+        {
+          "month": "March",
+          "amount": 2400.20,
+          "units_used": 280,
+          "bill_paid_date": "2024-03-19"
+        },
+        {
+          "month": "April",
+          "amount": 2550.10,
+          "units_used": 310,
+          "bill_paid_date": "2024-04-21"
+        },
+        {
+          "month": "May",
+          "amount": 2450.40,
+          "units_used": 290,
+          "bill_paid_date": "2024-05-19"
+        },
+        {
+          "month": "June",
+          "amount": 2200.70,
+          "units_used": 260,
+          "bill_paid_date": "2024-06-22"
+        },
+        {
+          "month": "July",
+          "amount": 2300.30,
+          "units_used": 270,
+          "bill_paid_date": "2024-07-20"
+        },
+        {
+          "month": "August",
+          "amount": 2600.90,
+          "units_used": 300,
+          "bill_paid_date": "2024-08-18"
+        },
+        {
+          "month": "September",
+          "amount": 2700.20,
+          "units_used": 320,
+          "bill_paid_date": "2024-09-20"
+        },
+        {
+          "month": "October",
+          "amount": 2350.60,
+          "units_used": 280,
+          "bill_paid_date": "2024-10-21"
+        },
+        {
+          "month": "November",
+          "amount": 2200.50,
+          "units_used": 250,
+          "bill_paid_date": "2024-11-19"
+        },
+        {
+          "month": "December",
+          "amount": 2750.30,
+          "units_used": 330,
+          "bill_paid_date": "2024-12-22"
+        }
+      ]
+    },
+    {
+      "name": "anush anchan",
+      "monthly_bills": [
+        {
+          "month": "January",
+          "amount": 2100.50,
+          "units_used": 250,
+          "bill_paid_date": "2024-01-20"
+        },
+        {
+          "month": "February",
+          "amount": 2250.30,
+          "units_used": 260,
+          "bill_paid_date": "2024-02-18"
+        },
+        {
+          "month": "March",
+          "amount": 2400.20,
+          "units_used": 280,
+          "bill_paid_date": "2024-03-19"
+        },
+        {
+          "month": "April",
+          "amount": 2550.10,
+          "units_used": 310,
+          "bill_paid_date": "2024-04-21"
+        },
+        {
+          "month": "May",
+          "amount": 2450.40,
+          "units_used": 290,
+          "bill_paid_date": "2024-05-19"
+        },
+        {
+          "month": "June",
+          "amount": 2200.70,
+          "units_used": 260,
+          "bill_paid_date": "2024-06-22"
+        },
+        {
+          "month": "July",
+          "amount": 2300.30,
+          "units_used": 270,
+          "bill_paid_date": "2024-07-20"
+        },
+        {
+          "month": "August",
+          "amount": 2600.90,
+          "units_used": 300,
+          "bill_paid_date": "2024-08-18"
+        },
+        {
+          "month": "September",
+          "amount": 2700.20,
+          "units_used": 320,
+          "bill_paid_date": "2024-09-20"
+        },
+        {
+          "month": "October",
+          "amount": 2350.60,
+          "units_used": 280,
+          "bill_paid_date": "2024-10-21"
+        },
+        {
+          "month": "November",
+          "amount": 2200.50,
+          "units_used": 250,
+          "bill_paid_date": "2024-11-19"
+        },
+        {
+          "month": "December",
+          "amount": 2750.30,
+          "units_used": 330,
+          "bill_paid_date": "2024-12-22"
+        }
+      ]
+    },
+    {
+      "name": "angela joshi",
+      "monthly_bills": [
+        {
+          "month": "January",
+          "amount": 2100.50,
+          "units_used": 250,
+          "bill_paid_date": "2024-01-20"
+        },
+        {
+          "month": "February",
+          "amount": 2250.30,
+          "units_used": 260,
+          "bill_paid_date": "2024-02-18"
+        },
+        {
+          "month": "March",
+          "amount": 2400.20,
+          "units_used": 280,
+          "bill_paid_date": "2024-03-19"
+        },
+        {
+          "month": "April",
+          "amount": 2550.10,
+          "units_used": 310,
+          "bill_paid_date": "2024-04-21"
+        },
+        {
+          "month": "May",
+          "amount": 2450.40,
+          "units_used": 290,
+          "bill_paid_date": "2024-05-19"
+        },
+        {
+          "month": "June",
+          "amount": 2200.70,
+          "units_used": 260,
+          "bill_paid_date": "2024-06-22"
+        },
+        {
+          "month": "July",
+          "amount": 2300.30,
+          "units_used": 270,
+          "bill_paid_date": "2024-07-20"
+        },
+        {
+          "month": "August",
+          "amount": 2600.90,
+          "units_used": 300,
+          "bill_paid_date": "2024-08-18"
+        },
+        {
+          "month": "September",
+          "amount": 2700.20,
+          "units_used": 320,
+          "bill_paid_date": "2024-09-20"
+        },
+        {
+          "month": "October",
+          "amount": 2350.60,
+          "units_used": 280,
+          "bill_paid_date": "2024-10-21"
+        },
+        {
+          "month": "November",
+          "amount": 2200.50,
+          "units_used": 250,
+          "bill_paid_date": "2024-11-19"
+        },
+        {
+          "month": "December",
+          "amount": 2750.30,
+          "units_used": 330,
+          "bill_paid_date": "2024-12-22"
+        }
+      ]
+    },
+    {
+      "name": "fatima ahmed",
+      "monthly_bills": [
+        {
+          "month": "January",
+          "amount": 2100.50,
+          "units_used": 250,
+          "bill_paid_date": "2024-01-20"
+        },
+        {
+          "month": "February",
+          "amount": 2250.30,
+          "units_used": 260,
+          "bill_paid_date": "2024-02-18"
+        },
+        {
+          "month": "March",
+          "amount": 2400.20,
+          "units_used": 280,
+          "bill_paid_date": "2024-03-19"
+        },
+        {
+          "month": "April",
+          "amount": 2550.10,
+          "units_used": 310,
+          "bill_paid_date": "2024-04-21"
+        },
+        {
+          "month": "May",
+          "amount": 2450.40,
+          "units_used": 290,
+          "bill_paid_date": "2024-05-19"
+        },
+        {
+          "month": "June",
+          "amount": 2200.70,
+          "units_used": 260,
+          "bill_paid_date": "2024-06-22"
+        },
+        {
+          "month": "July",
+          "amount": 2300.30,
+          "units_used": 270,
+          "bill_paid_date": "2024-07-20"
+        },
+        {
+          "month": "August",
+          "amount": 2600.90,
+          "units_used": 300,
+          "bill_paid_date": "2024-08-18"
+        },
+        {
+          "month": "September",
+          "amount": 2700.20,
+          "units_used": 320,
+          "bill_paid_date": "2024-09-20"
+        },
+        {
+          "month": "October",
+          "amount": 2350.60,
+          "units_used": 280,
+          "bill_paid_date": "2024-10-21"
+        },
+        {
+          "month": "November",
+          "amount": 2200.50,
+          "units_used": 250,
+          "bill_paid_date": "2024-11-19"
+        },
+        {
+          "month": "December",
+          "amount": 2750.30,
+          "units_used": 330,
+          "bill_paid_date": "2024-12-22"
+        }
+      ]
+    }
+  ]
+}
+

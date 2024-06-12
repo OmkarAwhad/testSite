@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electricity Bill Management System</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <div class="container bg-zinc-400 w-full h-screen overflow-y-auto mx-auto p-4 flex flex-col items-center gap-y-4">
+        <div class="p-4 flex gap-x-2 flex-row items-center">
+            <label for="name">Name : </label>
+            <input type="text" placeholder="Enter name and hit enter" id="name" class="border-red-400 mr-6 rounded-md p-2" />
+
+            <label for="months">Month : </label>
+            <select name="months" id="months" class="rounded-md p-2">
+                <!-- <option class="text-zinc-500">Select</option> -->
+                <option value="All">All</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+        <div >
+            <button id="btn" class="bg-zinc-700 px-4 py-2 text-white rounded-md">Search</button>
+        </div>
+        <div class="result w-[70%] relative">
+            <!-- <img class="image"> -->
+            <p class="resultName pr-3 font-extrabold text-xl  "></p>
+            <table class="border-2 w-full border-black m-4 ">
+                <tbody id="records">
+                </tbody>
+            </table>
+            <div class="flex justify-end items-end">
+                <table >
+                    <tbody id="bill">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
